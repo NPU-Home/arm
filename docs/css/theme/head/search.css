@@ -10,6 +10,7 @@ input[type=text].md-search__input::placeholder {
     transition: background-radius 1s cubic-bezier(0, 1.16, 0.58, 1);
     border-radius: 8px;
     background-color: var(--md-accent-fg-color--transparent);
+    transition: background-color 0.5s cubic-bezier(0.87, 0.29, 0.14, 0.61) 0s;
 }
 .md-search__form:hover{
     background-color: var(--md-default-bg-color);

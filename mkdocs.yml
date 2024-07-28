@@ -56,6 +56,10 @@ extra_css:
 
     - css/img-zoom/zoom.css
 
+    - css/enc/input.css
+    - css/enc/button.css
+    - css/enc/msg.css
+
 extra_javascript:
     # - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -63,23 +67,24 @@ extra_javascript:
 
 plugins:
     - search: {}
-    # - encryptcontent:
-    #     password_file: 'passwords.yml'
+    - encryptcontent:
+        password_file: 'passwords.yml'
 
-    #     password_button: True
-    #     password_button_text: "custom_text_button"
+        reload_scripts:
+          - 'js/zoom.js'
+          - 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
 
-    #     title_prefix: ""
-    #     summary: "如需访问该网站内容，请输入口令。"
-    #     placeholder: "口令"
-    #     decryption_failure_message: "错误！"
-    #     encryption_info_message: " "
-    #   # input_class: 'md-enctypt__input'
-    #   # button_class: 'md-enctypt__button'
+        password_button: True
+        password_button_text: "→"
 
-    #     reload_scripts:
-    #       - 'docs/js/zoom.js'
-    #       - 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+        title_prefix: ""
+        summary: "如需访问该网站内容，请输入正确口令。"
+        placeholder: "请输入口令"
+        decryption_failure_message: "⚠ 错误！"
+        encryption_info_message: "此内容为涉及核心代码，非基地内成员禁止访问！"
+        # input_class: 'md-enctypt__input'
+      # button_class: 'md-enctypt__button'
+
 
     - git-revision-date-localized:
         type: timeago
