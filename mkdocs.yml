@@ -78,10 +78,10 @@ plugins:
         password_button_text: "→"
 
         title_prefix: ""
-        summary: "如需访问该网站内容，请输入正确口令。"
+        summary: "限制访问！"
         placeholder: "请输入口令"
         decryption_failure_message: "⚠ 错误！"
-        encryption_info_message: "此内容为涉及核心代码，非基地内成员禁止访问！"
+        encryption_info_message: "此内容为涉及核心代码，非基地内成员禁止访问！如需访问该网站内容，请输入正确口令。"
         # input_class: 'md-enctypt__input'
       # button_class: 'md-enctypt__button'
 
@@ -163,6 +163,7 @@ nav:
           - 串口通信: page/doc/电子/串口通信.md
           - 数据帧格式: page/doc/电子/数据帧格式.md
           - 数据帧构造: page/doc/电子/数据帧构造.md
+          - 解算算法: page/doc/解算/计算文档.md
     - 教程:
           - page/tutorial/index.md
           - 配置URDF: page/tutorial/MoveIt!/配置URDF.md
