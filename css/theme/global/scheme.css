@@ -15,7 +15,7 @@
         --md-footer-fg-color--light: #000000;
         --md-footer-fg-color--lighter: #000000;
         /*代码颜色 */
-        --md-code-bg-color: #e5e5e5;
+        --md-code-bg-color: #ffffffab;
         --md-code-fg-color: var(--md-typeset-color);
         --md-accent-fg-color--transparent: #c1c1c15b;
         --md-pic-shadow-color:rgba(0, 0, 0, 0.075);
