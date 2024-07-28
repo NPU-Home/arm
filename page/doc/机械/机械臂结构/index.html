@@ -82,6 +82,12 @@
     
       <link rel="stylesheet" href="../../../../css/img-zoom/zoom.css">
     
+      <link rel="stylesheet" href="../../../../css/enc/input.css">
+    
+      <link rel="stylesheet" href="../../../../css/enc/button.css">
+    
+      <link rel="stylesheet" href="../../../../css/enc/msg.css">
+    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -858,205 +864,33 @@
   
 
 
-<h1 id="_1">机械臂结构</h1>
-<p>为了方便描述机械臂的结构，下面介绍机械臂各部件的别名和功能。机械臂的结构会经常做出调整，但只要主要结构保持不变，就可以使用相同的方法进行描述。</p>
-<h2 id="_2">机械臂的基本结构</h2>
-<p>机械臂的基本结构由机械臂的基本部件组成，主要包括：机械臂的臂架、机械臂的关节、机械臂的末端执行器。</p>
-<h3 id="_3">机械臂的臂架</h3>
-<p>机械臂的臂架是机械臂的主体结构，用于支撑机械臂的其他部件。机械臂的臂架通常由铝合金、碳纤维等材料制成，具有一定的刚性和强度。</p>
-<h3 id="_4">机械臂的关节</h3>
-<p>机械臂的关节是机械臂的运动部件，用于连接机械臂的各个部件。机械臂的关节通常由电机、减速器、编码器等部件组成，用于实现机械臂的运动。</p>
-<h3 id="_5">机械臂的末端执行器</h3>
-<p>机械臂的末端执行器是机械臂的工作部件，用于实现机械臂的工作功能。机械臂的末端执行器通常由夹爪、吸盘、激光头等部件组成，用于实现机械臂的工作功能。</p>
-<h2 id="_6">机械臂的主要结构名称和关系</h2>
-<p><img alt="main" src="../assets/image.png" /></p>
-<h3 id="_7">机械臂的关节</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">机械臂关节</th>
-<th style="text-align: center;">电机名称</th>
-<th style="text-align: center;">变量名</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">Platform</td>
-<td style="text-align: center;">滑台（步进电机）</td>
-<td style="text-align: center;"><code>platform</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">Joint_0</td>
-<td style="text-align: center;">一号电机</td>
-<td style="text-align: center;"><code>joint_0</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">Joint_1</td>
-<td style="text-align: center;">二号电机</td>
-<td style="text-align: center;"><code>joint_1</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">Joint_2</td>
-<td style="text-align: center;">三号电机</td>
-<td style="text-align: center;"><code>joint_2</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">Joint_3</td>
-<td style="text-align: center;">四号电机</td>
-<td style="text-align: center;"><code>joint_3</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">Gripper</td>
-<td style="text-align: center;">爪子</td>
-<td style="text-align: center;"><code>gripper</code></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>各个电机的旋转方向如上图绿色箭头所示，其中一号电机图示为垂直向下观察。</li>
-<li>注意电子中电机编号从<strong>一</strong>开始，而软件中编号从<strong>0</strong>开始。</li>
-<li>
-<p>各个电机的初始位置见下图：</p>
-<p><img alt="angle" src="../assets/image-2.png" /></p>
-</li>
-</ul>
-<h3 id="_8">机械臂的臂架</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">名称</th>
-<th style="text-align: center;">变量名</th>
-<th style="text-align: center;">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">滑台</td>
-<td style="text-align: center;"><code>PLATFORM</code>或<code>platform</code></td>
-<td style="text-align: center;">机械臂的底座，用于支撑机械臂的其他部件。</td>
-</tr>
-<tr>
-<td style="text-align: center;">大臂</td>
-<td style="text-align: center;"><code>UPPERARM</code></td>
-<td style="text-align: center;">机械臂的第一段臂架，用于连接滑台和小臂。</td>
-</tr>
-<tr>
-<td style="text-align: center;">小臂</td>
-<td style="text-align: center;"><code>FOREARM</code></td>
-<td style="text-align: center;">机械臂的第二段臂架，用于连接大臂和末端执行器。</td>
-</tr>
-<tr>
-<td style="text-align: center;">爪子</td>
-<td style="text-align: center;"><code>gripper</code></td>
-<td style="text-align: center;">机械臂的末端执行器，用于实现机械臂的工作功能。</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>滑台高度为机械臂底座上表面距离地面的垂直距离。</li>
-<li>滑台变量名为<code>PLATFORM</code>时表示默认初始位置距离地面的高度，<code>platform</code>表示经过移动后的滑台高度。</li>
-<li>大臂、小臂的名称参考人体胳膊的结构，大臂为上臂（靠近滑台），小臂为前臂（远离滑台）。</li>
-</ul>
-<h3 id="_9">机械臂的距离修正变量</h3>
-<p>在机械臂真正的物理结构中，各个部件之间的距离可能会有一定的误差，为了保证机械臂的运动精度，需要对机械臂的距离进行修正。</p>
-<p><img alt="values" src="../assets/image-1.png" /></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">变量名</th>
-<th style="text-align: center;">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code>JOINT_1H</code></td>
-<td style="text-align: center;">1 号电机距离机械臂底座的垂直高度</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>JOINT_1L</code></td>
-<td style="text-align: center;">1 号电机距离滑杆中心点的水平距离</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>JOINT_1R</code></td>
-<td style="text-align: center;">1 号电机中心点距离大臂中轴线的垂直距离</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>JOINT_2L</code></td>
-<td style="text-align: center;">2 号电机中心点距离大臂中轴线的垂直距离</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>JOINT_2R</code></td>
-<td style="text-align: center;">2 号电机中心点就小臂中轴线的垂直距离</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>1 号电机为电子二号电机，2 号电机为电子三号电机。</li>
-<li><code>L</code>为水平方向修正变量，<code>H</code>为垂直方向修正变量，<code>R</code>为电机半径修正变量。（仅用作方便记忆，与实际情况有所偏差）</li>
-</ul>
-<h2 id="_10">机械臂结构测量数据</h2>
-<p>机械臂结构测量数据如下（单位：mm）：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">机械臂部件</th>
-<th style="text-align: center;">变量名称</th>
-<th style="text-align: center;">测量数据</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">大臂长度</td>
-<td style="text-align: center;"><code>UPPERARM</code></td>
-<td style="text-align: center;">314.92764962765654</td>
-</tr>
-<tr>
-<td style="text-align: center;">小臂长度</td>
-<td style="text-align: center;"><code>FOREARM</code></td>
-<td style="text-align: center;">340</td>
-</tr>
-<tr>
-<td style="text-align: center;">爪子长度</td>
-<td style="text-align: center;"><code>GRIPPER</code></td>
-<td style="text-align: center;">183.71</td>
-</tr>
-<tr>
-<td style="text-align: center;">机器人高度</td>
-<td style="text-align: center;"><code>ROBOT</code></td>
-<td style="text-align: center;">1446.92</td>
-</tr>
-<tr>
-<td style="text-align: center;">滑台初始高度</td>
-<td style="text-align: center;"><code>PLATFORM</code></td>
-<td style="text-align: center;">787.2</td>
-</tr>
-<tr>
-<td style="text-align: center;">1 号电机 H 修正</td>
-<td style="text-align: center;"><code>JOINT_1H</code></td>
-<td style="text-align: center;">121.5</td>
-</tr>
-<tr>
-<td style="text-align: center;">1 号电机 L 修正</td>
-<td style="text-align: center;"><code>JOINT_1L</code></td>
-<td style="text-align: center;">150.54</td>
-</tr>
-<tr>
-<td style="text-align: center;">1 号电机 R 修正</td>
-<td style="text-align: center;"><code>JOINT_1R</code></td>
-<td style="text-align: center;">47.44818331611865</td>
-</tr>
-<tr>
-<td style="text-align: center;">2 号电机 L 修正</td>
-<td style="text-align: center;"><code>JOINT_2L</code></td>
-<td style="text-align: center;">54.07967547979555</td>
-</tr>
-<tr>
-<td style="text-align: center;">2 号电机 R 修正</td>
-<td style="text-align: center;"><code>JOINT_2R</code></td>
-<td style="text-align: center;">31.7</td>
-</tr>
-</tbody>
-</table>
+<div id="mkdocs-encrypted-content" style="display:none">5rQX610u3joEcNUEuTON3A==;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</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>如需访问该网站内容，请输入正确口令。</h1>
+        <p>此内容为涉及核心代码，非基地内成员禁止访问！</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="请输入口令">
+        <button class="md-button md-button--primary" id="mkdocs-decrypt-button">→</button>
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "arm/page/doc/%E6%9C%BA%E6%A2%B0/%E6%9C%BA%E6%A2%B0%E8%87%82%E7%BB%93%E6%9E%84/";
+var decryption_failure_message = "\u26a0 \u9519\u8bef\uff01";
+var encryptcontent_keystore = ["i6yey2cnqax/PSK4W6i0gw==;xFi5cp+thPpLq3dM1TXADdtNPUXTR5WEkEX0C4eQR/579kD87DrRCrZ6QZA3ncbFBXBzTSDjJmX7WaSgdq+PHaMfjZzhMcax0oELrrQVOVu8diXCkAZqn/XkzGiFvfmV;cmVXud1i3dVpd43+BUezTw=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 

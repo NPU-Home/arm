@@ -1,18 +1,3 @@
-// 动态创建遮罩和放大图片容器并插入到DOM中
-const overlay = document.createElement('div');
-overlay.classList.add('overlay');
-document.body.appendChild(overlay);
-
-const zoomContainer = document.createElement('div');
-zoomContainer.classList.add('image-zoom-container');
-document.body.appendChild(zoomContainer);
-
-// 添加关闭按钮并插入到页面中
-const closeButton = document.createElement('button');
-closeButton.innerText = '×'; // 设置按钮文本为 ×
-closeButton.classList.add('close-button');
-document.body.appendChild(closeButton);
-
 document.querySelectorAll('.md-typeset img').forEach(item => {
     item.addEventListener('click', function () {
         // 判断图片是否具有 no-zoom 类
@@ -20,11 +5,27 @@ document.querySelectorAll('.md-typeset img').forEach(item => {
             return; // 如果是，跳过放大操作
         }
 
+        // 创建遮罩
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        document.body.appendChild(overlay);
+
+        // 创建放大图片容器
+        const zoomContainer = document.createElement('div');
+        zoomContainer.classList.add('image-zoom-container');
+        document.body.appendChild(zoomContainer);
+
+        // 创建关闭按钮
+        const closeButton = document.createElement('button');
+        closeButton.innerText = '×'; // 设置按钮文本为 ×
+        closeButton.classList.add('close-button');
+        document.body.appendChild(closeButton);
+
         const imgSrc = this.src; // 获取点击图片的src
         const zoomedImage = document.createElement('img');
         zoomedImage.src = imgSrc;
 
-        // 清空放大图片容器并插入新的放大图片
+        // 插入新的放大图片
         zoomContainer.innerHTML = '';
         zoomContainer.appendChild(zoomedImage);
 
@@ -112,19 +113,19 @@ document.querySelectorAll('.md-typeset img').forEach(item => {
             isDragging = false;
             zoomedImage.style.cursor = 'grab';
         });
+
+        // 添加点击遮罩时隐藏放大图片的功能
+        overlay.addEventListener('click', function () {
+            document.body.removeChild(overlay);
+            document.body.removeChild(zoomContainer);
+            document.body.removeChild(closeButton);
+        });
+
+        // 添加点击关闭按钮时隐藏放大图片的功能
+        closeButton.addEventListener('click', function () {
+            document.body.removeChild(overlay);
+            document.body.removeChild(zoomContainer);
+            document.body.removeChild(closeButton);
+        });
     });
-});
-
-// 添加点击遮罩时隐藏放大图片的功能
-overlay.addEventListener('click', function () {
-    overlay.classList.remove('show-overlay');
-    zoomContainer.classList.remove('show-overlay');
-    closeButton.classList.remove('show-button');
-});
-
-// 添加点击关闭按钮时隐藏放大图片的功能
-closeButton.addEventListener('click', function () {
-    overlay.classList.remove('show-overlay');
-    zoomContainer.classList.remove('show-overlay');
-    closeButton.classList.remove('show-button');
 });

@@ -82,6 +82,12 @@
     
       <link rel="stylesheet" href="../../../../css/img-zoom/zoom.css">
     
+      <link rel="stylesheet" href="../../../../css/enc/input.css">
+    
+      <link rel="stylesheet" href="../../../../css/enc/button.css">
+    
+      <link rel="stylesheet" href="../../../../css/enc/msg.css">
+    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -726,38 +732,33 @@
   
 
 
-<h1 id="_1">数据帧格式</h1>
-<h2 id="_2">总体预览</h2>
-<p><img alt="pic" src="../assets/pkg.drawio.svg" /></p>
-<h2 id="_3">数据含义</h2>
-<ul>
-<li>帧头：数据帧的开始标识，2 字节，固定为<code>0xFF 0xFF</code>。</li>
-<li>ID：数据帧的唯一标识，1 字节，固定为<code>0x01</code>。</li>
-<li>数据长度：后续接受数据的字节数，默认为<code>0x06</code>。</li>
-<li>数据：各电机所需到达位置，每个电机 1 字节。<ul>
-<li>滑台：表示滑台位置÷100+70，单位为毫米，范围为<code>0x00~0xFF</code>。</li>
-<li>电机 1：表示角度值+70，角度制，范围为<code>0x00~0xFF</code>。</li>
-<li>电机 2：表示角度值+70，角度制，范围为<code>0x00~0xFF</code>。</li>
-<li>电机 3：表示角度值+70，角度制，范围为<code>0x00~0xFF</code>。</li>
-<li>电机 4：表示角度值+70，角度制，范围为<code>0x00~0xFF</code>。</li>
-<li>爪子：表示开合状态：开为<code>0x47</code>，关为<code>0x46</code>。</li>
-</ul>
-</li>
-<li>校验位：用于数据帧的校验：对数据部分求和并对<code>0xFF</code>取模值，1 字节。</li>
-<li>帧尾：数据帧的结束标识，1 字节，固定为<code>0xFE</code>。</li>
-</ul>
-<h2 id="_4">数据示例</h2>
-<p>数据帧内容：</p>
-<div class="highlight"><pre><span></span><code>FF FF 01 06 45 4C 4C A0 FA 47 C7 FE
-</code></pre></div>
-<p>机械臂对应位置：</p>
-<div class="highlight"><pre><span></span><code>platform: -100 mm
-joint_0: 6°
-joint_1: 6°
-joint_2: 90°
-joint_3: 180°
-gripper: open
-</code></pre></div>
+<div id="mkdocs-encrypted-content" style="display:none">BCrZxfh0PYE+LOfKjYcymg==;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</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>如需访问该网站内容，请输入正确口令。</h1>
+        <p>此内容为涉及核心代码，非基地内成员禁止访问！</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="请输入口令">
+        <button class="md-button md-button--primary" id="mkdocs-decrypt-button">→</button>
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "arm/page/doc/%E7%94%B5%E5%AD%90/%E6%95%B0%E6%8D%AE%E5%B8%A7%E6%A0%BC%E5%BC%8F/";
+var decryption_failure_message = "\u26a0 \u9519\u8bef\uff01";
+var encryptcontent_keystore = ["i6yey2cnqax/PSK4W6i0gw==;xFi5cp+thPpLq3dM1TXADdtNPUXTR5WEkEX0C4eQR/579kD87DrRCrZ6QZA3ncbFBXBzTSDjJmX7WaSgdq+PHaMfjZzhMcax0oELrrQVOVu8diXCkAZqn/XkzGiFvfmV;cmVXud1i3dVpd43+BUezTw=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 
