@@ -160,7 +160,7 @@ markdown_extensions:
 
 
 nav:
-    - 👉 : index.md
+    # - 🦾 : index.md
     - 文档:
           - page/doc/index.md
           - 机械臂结构: page/doc/机械/机械臂结构.md

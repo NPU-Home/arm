@@ -1,8 +1,7 @@
 ---
 hide:
     - navigation
-    # - toc
-    - statistics
+    - -footer
 title: 首页
 comment: True
 ---
@@ -30,25 +29,10 @@ comment: True
 
 <div class="grid cards" markdown>
 
--   :material-github: 组织仓库: [NPU-Home](https://github.com/NPU-Home)
--   :material-file-code: 源代码: [xm_arm](https://github.com/NPU-Home/xm_arm.git)
+-   :material-home: 基地官网：[NPU-舞蹈机器人基地](https://github.com/NPU-Home/home)
+-   :material-github: 家政组软件仓库: [NPU-Home](https://github.com/NPU-Home)
+-   :material-file-code: 机械臂源代码: [xm_arm](https://github.com/NPU-Home/xm_arm.git)
+-   :material-book: 文档仓库：[arm-doc](https://github.com/NPU-Home/arm-doc)
+-   :material-web: 网站源代码：[arm](https://github.com/NPU-Home/arm)
 
 </div>
-
-## 更新日志
-
--   2024-7-17：添加了关闭按钮。
-
--   2024-7-16：添加图片放大预览功能。
-
-    -   功能预览：
-
-        点击下面图片，可使用滚轮放大缩小图片，或点击拖动图片位置。
-
-        ![e1](image/org.jpg)
-
-        在图片后添加{: .no-zoom}，可禁用放大功能。
-
-        ![e2](image/base.jpg){: .no-zoom}
-
--   2024-7-14：上传数据包介绍文档。
