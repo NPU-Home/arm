@@ -4,6 +4,7 @@ hide:
     # - toc
     - statistics
 title: 首页
+comment: True
 ---
 # 机械臂技术文档
 

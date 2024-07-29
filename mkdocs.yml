@@ -34,6 +34,8 @@ theme:
     palette:
         scheme: auto
 
+    custom_dir: docs/resources
+
 extra_css:
     - css/theme/global/fonts.css
     - css/theme/global/scheme.css
@@ -59,6 +61,8 @@ extra_css:
     - css/enc/input.css
     - css/enc/button.css
     - css/enc/msg.css
+
+    - css/giscus/giscus.css
 
 extra_javascript:
     # - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -156,7 +160,7 @@ markdown_extensions:
 
 
 nav:
-    # - index.md
+    - 👉 : index.md
     - 文档:
           - page/doc/index.md
           - 机械臂结构: page/doc/机械/机械臂结构.md
