@@ -73,6 +73,7 @@ extra_javascript:
     - js/zoom.js
 
 plugins:
+    - heti
     - search: {}
     - encryptcontent:
         password_file: 'passwords.yml'
