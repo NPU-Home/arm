@@ -34,8 +34,17 @@ comment: True
 
 ## 相关链接
 
+### 基地链接
+
 [:material-home: 基地官网：NPU-舞蹈机器人基地](https://npu-home.github.io/home/){.md-button}
 [:material-github: 家政组软件仓库: NPU-Home](https://github.com/NPU-Home){.md-button}
+
+### 项目链接
+
 [:material-file-code: 机械臂源代码: xm_arm](https://github.com/NPU-Home/xm_arm.git){.md-button}
 [:material-book: 文档仓库：arm-doc](https://github.com/NPU-Home/arm-doc){.md-button}
 [:material-web: 网站源代码：arm](https://github.com/NPU-Home/arm){.md-button}
+
+## 贡献
+
+[![GaoZQi](https://avatars.githubusercontent.com/u/62362150?v=4){#ico .no-zoom}](https://github.com/GaoZQi){#no-underline}
