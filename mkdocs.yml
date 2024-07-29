@@ -55,12 +55,14 @@ extra_css:
     - css/theme/link.css
     # - css/custom.css
     - css/theme/card.css
+    - css/theme/button.css
 
     - css/img-zoom/zoom.css
 
     - css/enc/input.css
     - css/enc/button.css
     - css/enc/msg.css
+
 
     - css/giscus/giscus.css
 
