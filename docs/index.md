@@ -29,7 +29,7 @@ comment: True
 
 <div class="grid cards" markdown>
 
--   :material-home: 基地官网：[NPU-舞蹈机器人基地](https://github.com/NPU-Home/home)
+-   :material-home: 基地官网：[NPU-舞蹈机器人基地](https://npu-home.github.io/home/)
 -   :material-github: 家政组软件仓库: [NPU-Home](https://github.com/NPU-Home)
 -   :material-file-code: 机械臂源代码: [xm_arm](https://github.com/NPU-Home/xm_arm.git)
 -   :material-book: 文档仓库：[arm-doc](https://github.com/NPU-Home/arm-doc)
