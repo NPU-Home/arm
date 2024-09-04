@@ -164,7 +164,7 @@ markdown_extensions:
 
 
 nav:
-    # - 🦾 : index.md
+    - 首页: index.md
     - 文档:
           - page/doc/index.md
           - 机械臂结构: page/doc/机械/机械臂结构.md
@@ -176,3 +176,5 @@ nav:
           - page/tutorial/index.md
           - 配置URDF: page/tutorial/MoveIt!/配置URDF.md
     - 历史文档: page/history/index.md
+
+    - 其他文档: https://npu-home.github.io/home/page/%E6%96%87%E6%A1%A3/
