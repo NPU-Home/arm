@@ -1,6 +1,5 @@
 site_name: 机械臂文档 # 网站名称
 site_url: https://NPU-Home.github.io/arm # 网站地址
-# site_description: 机械臂文档 # 网站描述
 site_author: GaoZQi # 网站作者
 
 repo_name: NPU-Home/arm-doc # 仓库名称
@@ -22,10 +21,7 @@ theme:
         - content.code.copy # 代码复制
         - content.code.annotate # 代码注释
         - navigation.footer # 导航栏底部
-        # - header.autohide
         - navigation.sections
-        # - navigation.tabs.sticky  #粘滞选项卡
-        # - toc.integrate
         - navigation.expand #目录展开
         - navigation.path
         - toc.follow
@@ -90,8 +86,6 @@ plugins:
         placeholder: "请输入口令"
         decryption_failure_message: "⚠ 错误！"
         encryption_info_message: "此内容为涉及核心代码，非基地内成员禁止访问！如需访问该网站内容，请输入正确口令。"
-        # input_class: 'md-enctypt__input'
-      # button_class: 'md-enctypt__button'
 
 
     - git-revision-date-localized:
@@ -101,17 +95,6 @@ plugins:
         locale: zh
         fallback_to_build_date: false
         enable_creation_date: true
-    # - mkdocs-code-runner
-    # - git-revision-date-localized:
-    #     type: iso_datetime
-    #     custom_format: "%d. %B %Y"
-    #     timezone: Asia/Shanghai
-    #     locale: zh
-    #     fallback_to_build_date: false
-    #     enable_creation_date: true
-    #     # exclude:
-    # - statistics:
-    #     codelines_per_minute: 10
 
 markdown_extensions:
     - abbr # 缩写
@@ -159,9 +142,6 @@ markdown_extensions:
               !!python/name:material.extensions.emoji.twemoji # emoji索引
           emoji_generator: !!python/name:material.extensions.emoji.to_svg
               # emoji生成器
-
-              # 导航栏
-
 
 nav:
     - 首页: index.md
