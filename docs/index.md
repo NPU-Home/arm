@@ -1,7 +1,8 @@
 ---
 hide:
     - navigation
-    - -footer
+    # - toc
+    - footer
 title: 首页
 comment: True
 ---
@@ -46,15 +47,15 @@ comment: True
 
 -   ### 基地网站
 
-    [:material-home: 基地官网：NPU-舞蹈机器人基地](https://npu-home.github.io/home/){style="text-align:left;" #width .md-button}
+    [:material-home: 基地官网：NPU-舞蹈机器人基地](https://npu-home.github.io/home/){#width-left .md-button}
 
-    [:material-github: 家政组软件仓库: NPU-Home](https://github.com/NPU-Home){style="text-align:left;" #width .md-button}
+    [:material-github: 家政组软件仓库: NPU-Home](https://github.com/NPU-Home){#width-left .md-button}
 
 -   ### 文档仓库
 
-    [:material-book: 文档仓库：arm-doc](https://github.com/NPU-Home/arm-doc){style="text-align:left;" #width .md-button}
+    [:material-book: 文档仓库：arm-doc](https://github.com/NPU-Home/arm-doc){#width-left .md-button}
 
-    [:material-web: 网站源代码：arm](https://github.com/NPU-Home/arm){style="text-align:left;" #width .md-button}
+    [:material-web: 网站源代码：arm](https://github.com/NPU-Home/arm){#width-left .md-button}
 
 </div>
 

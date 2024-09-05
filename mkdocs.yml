@@ -59,7 +59,7 @@ extra_css:
     - css/enc/input.css
     - css/enc/button.css
     - css/enc/msg.css
-
+    - css/enc/block.css
 
     - css/giscus/giscus.css
 
@@ -86,6 +86,10 @@ plugins:
         placeholder: "请输入口令"
         decryption_failure_message: "⚠ 错误！"
         encryption_info_message: "此内容为涉及核心代码，非基地内成员禁止访问！如需访问该网站内容，请输入正确口令。"
+
+        encrypted_something:
+            md-footer__inner: [nav, class]
+            md-nav: [nav, class]
 
 
     - git-revision-date-localized:
@@ -127,6 +131,7 @@ markdown_extensions:
 
     - pymdownx.details # 详情
     - pymdownx.magiclink # 链接
+    - pymdownx.blocks.html
     - tables # 表格
 
     - meta
@@ -155,6 +160,10 @@ nav:
     - 教程:
           - page/tutorial/index.md
           - 配置URDF: page/tutorial/MoveIt!/配置URDF.md
-    - 历史文档: page/history/index.md
-
+    - 历史文档:
+        - page/history/index.md
+        - 问题反馈:
+            - GitHub: https://NPU-Home.github.io/arm
+        - 2017年:
+            - 开发记录: page/history/#2017
     - 其他文档: https://npu-home.github.io/home/page/%E6%96%87%E6%A1%A3/
