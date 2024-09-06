@@ -88,8 +88,12 @@ plugins:
         encryption_info_message: "此内容为涉及核心代码，非基地内成员禁止访问！如需访问该网站内容，请输入正确口令。"
 
         encrypted_something:
-            md-footer__inner: [nav, class]
-            md-nav: [nav, class]
+            # md-footer__inner: [nav, class]
+            md-nav md-nav--secondary: [nav, class]
+            # md-nav__list: [ul, class]
+            # md-nav__title: [lable, class]
+            # md-nav: [nav, class]
+            # md-sidebar__inner: [div, class]
 
 
     - git-revision-date-localized:
