@@ -10,3 +10,7 @@ form#mkdocs-decrypt-form:hover, form#mkdocs-decrypt-form:focus{
     /* border: 1px solid var(--md-pic-shadow-color); */
     box-shadow: var(--md-shadow-z2)
 }
+form#mkdocs-decrypt-form h1{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
