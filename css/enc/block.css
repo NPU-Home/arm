@@ -4,7 +4,9 @@ form#mkdocs-decrypt-form{
     background-color: var(--md-primary-fg-color);
     border-radius: 8px;
     border: 2px solid var(--md-pic-shadow-color);
+    transition: border .25s,box-shadow .25s;
 }
 form#mkdocs-decrypt-form:hover, form#mkdocs-decrypt-form:focus{
-    border: 2px solid var(--md-primary-fg-color);
+    border: 1px solid var(--md-pic-shadow-color);
+    box-shadow: var(--md-shadow-z2)
 }
