@@ -167,7 +167,5 @@ nav:
     - 历史文档:
         - page/history/index.md
         - 问题反馈:
-            - GitHub: https://NPU-Home.github.io/arm
-        - 2017年:
-            - 开发记录: page/history/#2017
+            - GitHub: https://github.com/NPU-Home/arm/discussions/9
     - 其他文档: https://npu-home.github.io/home/page/%E6%96%87%E6%A1%A3/
