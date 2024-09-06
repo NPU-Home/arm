@@ -236,7 +236,7 @@ function decryptor_reaction(key_or_keys, password_input, decrypted_content, fall
         }
 
         // continue to decrypt others parts
-        let encrypted_something = {'md-footer__inner': ['nav', 'class'], 'md-nav': ['nav', 'class']};
+        let encrypted_something = {'md-nav md-nav--secondary': ['nav', 'class']};
         decrypt_somethings(key, encrypted_something);
         if (typeof inject_something !== 'undefined') {
             decrypted_content = decrypt_somethings(key, inject_something);
