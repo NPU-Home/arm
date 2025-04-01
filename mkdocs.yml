@@ -33,21 +33,35 @@ theme:
     custom_dir: docs/resources
 
 extra_css:
-    - material-mkdocs-theme/css/import.css
+    - theme/css/import.css
 
 extra_javascript:
     # - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    - material-mkdocs-theme/js/zoom.js
 
 plugins:
     - heti
+    - glightbox:
+          touchNavigation: true
+          loop: false
+          effect: zoom
+          slide_effect: slide
+          width: 100%
+          height: auto
+          zoomable: true
+          draggable: true
+          skip_classes:
+              - skip-lightbox
+          auto_caption: false
+          caption_position: bottom
+          background: white
+          shadow: true
+          manual: false
     - search: {}
     - encryptcontent:
           password_file: "passwords.yml"
 
           reload_scripts:
-              - "js/zoom.js"
               - "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 
           password_button: True

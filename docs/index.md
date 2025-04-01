@@ -61,4 +61,4 @@ comment: True
 
 ## 贡献
 
-[![GaoZQi](https://avatars.githubusercontent.com/u/62362150?v=4){#ico .no-zoom}](https://github.com/GaoZQi){#no-underline}
+[![GaoZQi](https://avatars.githubusercontent.com/u/62362150?v=4){#ico .off-glb}](https://github.com/GaoZQi){#no-underline}
