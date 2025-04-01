@@ -9,7 +9,7 @@ comment: True
 
 # 机械臂技术文档
 
-<iframe id="embedPlayer" src="https://embed.music.apple.com/us/album/im-o-k/905206471?i=905206480&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; overflow: hidden; border-radius: 10px; box-shadow: 2px 3px 10px 2px var(--md-pic-shadow-color);transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe>
+<iframe id="embedPlayer" src="https://embed.music.apple.com/us/album/im-o-k/905206471?i=905206480&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; overflow: hidden; border-radius: 1rem; box-shadow: 2px 3px 10px 2px var(--md-pic-shadow-color);transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe>
 
 ## 网站导航
 
