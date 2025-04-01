@@ -68,12 +68,12 @@ plugins:
               # md-sidebar__inner: [div, class]
 
     - git-revision-date-localized:
-        type: timeago
-        custom_format: "%d. %B %Y"
-        timezone: Asia/Shanghai
-        locale: zh
-        fallback_to_build_date: false
-        enable_creation_date: true
+          type: timeago
+          custom_format: "%d. %B %Y"
+          timezone: Asia/Shanghai
+          locale: zh
+          fallback_to_build_date: false
+          enable_creation_date: true
 
 markdown_extensions:
     - abbr # 缩写
@@ -119,6 +119,7 @@ markdown_extensions:
           emoji_index:
               !!python/name:material.extensions.emoji.twemoji # emoji索引
 
+
           emoji_generator:
               !!python/name:material.extensions.emoji.to_svg # emoji生成器
 
@@ -127,16 +128,18 @@ nav:
     - 首页: index.md
     - 文档:
           - page/doc/index.md
-          - 机械臂结构: page/doc/机械/机械臂结构.md
-          - 串口通信: page/doc/电子/串口通信.md
-          - 数据帧格式: page/doc/电子/数据帧格式.md
-          - 数据帧构造: page/doc/电子/数据帧构造.md
-          - 解算算法: page/doc/解算/计算文档.md
     - 教程:
           - page/tutorial/index.md
           - 配置URDF: page/tutorial/MoveIt!/配置URDF.md
     - 历史文档:
-          - page/history/index.md
+          - page/backup/index.md
+          - 2023年:
+                - page/backup/2023/index.md
+                - 机械臂结构: page/backup/2023/机械/机械臂结构.md
+                - 串口通信: page/backup/2023/电子/串口通信.md
+                - 数据帧格式: page/backup/2023/电子/数据帧格式.md
+                - 数据帧构造: page/backup/2023/电子/数据帧构造.md
+                - 解算算法: page/backup/2023/解算/计算文档.md
           - 问题反馈:
                 - GitHub: https://github.com/NPU-Home/arm/discussions/9
     - 其他文档: https://npu-home.github.io/home/page/%E6%96%87%E6%A1%A3/
