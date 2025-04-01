@@ -31,7 +31,7 @@ comment: True
 
     机械臂软件的历史文档。
 
-    [查看历史文档 :material-chevron-right:](page/history/index.md){#right .md-button}
+    [查看历史文档 :material-chevron-right:](page/backup/index.md){#right .md-button}
 
 -   ### 项目代码
 
