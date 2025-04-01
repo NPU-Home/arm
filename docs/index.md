@@ -47,7 +47,7 @@ comment: True
 
 -   ### 基地网站
 
-    [:material-home: 基地官网：NPU-舞蹈机器人基地](https://npu-home.github.io/home/){#width-left .md-button}
+    [:material-home: 基地官网：NPU-舞蹈机器人基地](https://npu-home.github.io/){#width-left .md-button}
 
     [:material-github: 家政组软件仓库: NPU-Home](https://github.com/NPU-Home){#width-left .md-button}
 
