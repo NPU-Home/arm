@@ -2,3 +2,7 @@
 	path = docs/theme
 	url = git@github.com:GaoZQi/material-mkdocs-theme.git
 	branch = main
+[submodule "docs/page"]
+	path = docs/page
+	url = git@github.com:NPU-Home/arm-doc.git
+	branch = main
