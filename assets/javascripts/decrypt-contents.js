@@ -155,7 +155,47 @@ function reload_js(src) {
     }
 };
 
-
+/* Decrypt part of the search index and refresh it for search engine */
+function decrypt_search(keys, retry=true) {
+    let sessionIndex = sessionStorage.getItem('encryptcontent-index');
+    let could_decrypt = false;
+    if (sessionIndex) {
+        sessionIndex = JSON.parse(sessionIndex);
+        for (let i = 0; i < sessionIndex.docs.length; i++) {
+            let doc = sessionIndex.docs[i];
+            let location_sep = doc.location.indexOf(';');
+            if (location_sep !== -1) {
+                let location_id = doc.location.substring(0,location_sep);
+                let location_bundle = doc.location.substring(location_sep+1);
+                if (location_id in keys) {
+                    let key = keys[location_id];
+                    let location_decrypted = decrypt_content_from_bundle(key, location_bundle);
+                    if (location_decrypted) {
+                        doc.location = location_decrypted;
+                        doc.text = decrypt_content_from_bundle(key, doc.text);
+                        doc.title = decrypt_content_from_bundle(key, doc.title);
+                        could_decrypt = true;
+                    }
+                }
+            }
+        }
+        if (could_decrypt) {
+            //save decrypted index
+            sessionIndex = JSON.stringify(sessionIndex);
+            sessionStorage.setItem('encryptcontent-index', sessionIndex);
+            // force search index reloading on Worker
+            if (typeof searchWorker !== 'undefined') {
+                searchWorker.postMessage({init: true, sessionIndex: sessionIndex});
+            } else { //not default search plugin: reload whole page
+                window.location.reload();
+            }
+        }
+    } else if (retry) {
+        setTimeout(() => { //retry after one second if 'encryptcontent-index' not available yet
+            decrypt_search(keys, false);
+        }, 1000);
+    }
+};
 
 /* Decrypt speficique html entry from mkdocs configuration */
 function decrypt_somethings(key, encrypted_something) {
@@ -230,7 +270,7 @@ function decryptor_reaction(key_or_keys, password_input, decrypted_content, fall
         if (typeof key_or_keys === "object") {
             key = key_or_keys[encryptcontent_id];
             setKeys(key_or_keys);
-            
+            decrypt_search(key_or_keys);
         } else {
             key = key_or_keys;
         }
