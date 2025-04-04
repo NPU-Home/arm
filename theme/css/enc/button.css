@@ -1,0 +1,13 @@
+#mkdocs-decrypt-button {
+    min-width: 13%;
+    max-width: 15%;
+    padding: 0rem;
+    height: 2rem;
+    margin-left: 0;
+    height: 2rem;
+}
+
+#mkdocs-decrypt-button:hover,
+#mkdocs-decrypt-button:focus {
+    margin-left: 0;
+}
