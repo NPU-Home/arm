@@ -1,0 +1,46 @@
+name: Deploy MkDocs Site To Public Repo
+on:
+    push:
+        branches: ["main"] # 仅在 main 分支推送时触发
+    workflow_run:
+        workflows: ["Submodules Sync"] # 必须与目标 Workflow 的 name 完全一致
+        branches: [main]
+        types:
+            - completed # 监听目标 Workflow 完成
+
+permissions:
+    contents: read
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest # 使用 GitHub 提供的 Ubuntu 环境
+
+        steps:
+            - name: Checkout Main
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+                  submodules: true # 检出子模块
+
+            - name: Setup Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "3.12"
+
+            - name: Install Dependencies
+              run: pip install -r requirements.txt
+
+            - name: Build Site
+              run: python3 -m mkdocs build
+              env:
+                  MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Pushes to another repository
+              uses: cpina/github-action-push-to-another-repository@main
+              env:
+                  SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+              with:
+                  source-directory: "site"
+                  destination-github-username: "NPU-Home"
+                  destination-repository-name: "arm"
+                  target-branch: gh-pages

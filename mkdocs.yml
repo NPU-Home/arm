@@ -86,7 +86,10 @@ plugins:
           timezone: Asia/Shanghai
           locale: zh
           fallback_to_build_date: false
-          enable_creation_date: true
+
+    - git-committers:
+          repository: NPU-Home/arm-doc # 仓库名称
+          branch: main
 
 markdown_extensions:
     - abbr # 缩写
