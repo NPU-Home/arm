@@ -1,15 +1,17 @@
+
 <!DOCTYPE html>
+
 <html class="no-js" lang="zh">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="GaoZQi" name="author"/>
-<link href="https://NPU-Home.github.io/arm/page/tutorial/MoveIt%21/%E9%85%8D%E7%BD%AEURDF/" rel="canonical"/>
-<link href="../../" rel="prev"/>
-<link href="../../../backup/" rel="next"/>
+<link href="https://NPU-Home.github.io/arm/page/doc/electronic/package/" rel="canonical"/>
+<link href="../serial/" rel="prev"/>
+<link href="../../../tutorial/" rel="next"/>
 <link href="../../../../image/ico.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.12" name="generator"/>
-<title>配置URDF - 机械臂文档</title>
+<title>数据帧格式 - 机械臂文档</title>
 <link href="../../../../assets/stylesheets/main.2afb09e1.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -19,7 +21,7 @@
 <link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../theme/css/import.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
- <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -28,13 +30,13 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></link></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="auto" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#urdf">
+<a class="md-skip" href="#_1">
           跳转至
         </a>
 </div>
@@ -58,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              配置URDF
+              数据帧格式
             
           </span>
 </div>
@@ -121,8 +123,8 @@
 
       </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../doc/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../">
           
   
   
@@ -132,8 +134,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../tutorial/">
           
   
   
@@ -210,35 +212,35 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../doc/">
+<a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     文档
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             文档
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../doc/machinery/">
+<a class="md-nav__link" href="../../machinery/">
 <span class="md-ellipsis">
     机械篇
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
@@ -249,7 +251,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../doc/machinery/structure/">
+<a class="md-nav__link" href="../../machinery/structure/">
 <span class="md-ellipsis">
     机器人结构
     
@@ -257,7 +259,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../doc/machinery/armlink/">
+<a class="md-nav__link" href="../../machinery/armlink/">
 <span class="md-ellipsis">
     机械臂结构
     
@@ -265,7 +267,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../doc/machinery/data/">
+<a class="md-nav__link" href="../../machinery/data/">
 <span class="md-ellipsis">
     机械相关数据
     
@@ -275,27 +277,27 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../doc/electronic/">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     电子篇
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_3">
 <span class="md-nav__icon md-icon"></span>
             电子篇
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../doc/electronic/structure/">
+<a class="md-nav__link" href="../structure/">
 <span class="md-ellipsis">
     电子基础结构
     
@@ -303,175 +305,62 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../doc/electronic/serial/">
+<a class="md-nav__link" href="../serial/">
 <span class="md-ellipsis">
     串口通信
     
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../doc/electronic/package/">
-<span class="md-ellipsis">
-    数据帧格式
-    
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
-<span class="md-ellipsis">
-    教程
-    
-  </span>
-</a>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
-            教程
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    配置URDF
+    数据帧格式
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
+    数据帧格式
+    
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary" style="display:none">zCyqd7meOBXpODpL/2gUOQ==;5JoHLSCsiGrI7tUIGoIrBZ+7Di2lHa+mdhLXbO65leerVuRTQXupG+CuXhHAcD5AOBQMd9/ikXVMuLAuWtXkt8emmn2FTPxEgjb8obTzaZfQjcd/sG4yijWXl8yueTUPwirq/Br7eh5XTktS4msuT9QK0pW6PlQEGEyuuJ2x98TFrtSx/lsxT8yqNx2zG9AQ+2DxrWiD8XBoG2n2nNIHHwPECDg6br8uR9NvevmPcmIB7bnh9JTb+7ZZVAvYOsLg9skzal+BROyDvofx8qMlJQTeXkJ+AwyX5M77Agz/LxjLU4dm8TxHz+8REV17/4NAlhUa0EwkpZbboYx0TOmO55KUnfgGrAL23M/JSvFAqIwztOHHN3TCcwXrufx5jKVKcXTps1IMC9CmC4QyDHgXrbvfjkJxYCgc4pjYry3fiN9M3dWu4SAu2aHPn8hdJupGtE4ZW0zdkeeevpC9cYSnj22HlNq4En03MIlBb7z6NVaP5gqfsPdwr0eb415d6bf5D3sqbTDtPkRm3hPY1Z3AOfHswvNi2buCw70cUo1CTHdh5nSiBdjTjWky9tUlqHCgAwvECK/ZJIxVjKBLwSTZfA/0+mEBRMfsEdvcxD2R0s5uax2vAKFn6ca2Ap7AHjgs0d5Ni1MCyxWFtuq3U4eJwZ62+SA9SyBOHkJRsjZXoo3YaOyN9inc/d7fll7nmzRYxWup45lz6EGGljRvAnMtkH0SPdafCC/YV8fvrzHyY1vDyqA60KKKfIwKxEJSyqEkRCUUrFANmYjsdAytUsmO6Q==</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../tutorial/">
+<span class="md-ellipsis">
+    教程
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            教程
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tutorial/MoveIt%21/%E9%85%8D%E7%BD%AEURDF/">
+<span class="md-ellipsis">
     配置URDF
     
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#moveit">
-<span class="md-ellipsis">
-      准备 MoveIt! 环境
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      创建工作区
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#moveit_1">
-<span class="md-ellipsis">
-      启动 MoveIt!
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#urdf_1">
-<span class="md-ellipsis">
-      配置 URDF
-    </span>
-</a>
-<nav aria-label="配置 URDF" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#urdf_2">
-<span class="md-ellipsis">
-      打开 URDF 文件
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      生成自碰撞矩阵
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      设置/虚拟关节
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      添加规划组
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      设置机器人姿态
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      设置末端效应器
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      设置作者信息并保存
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      常见问题
-    </span>
-</a>
-<nav aria-label="常见问题" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      工作区常见问题
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#moveit_2">
-<span class="md-ellipsis">
-      MoveIt! 常见问题
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -728,138 +617,28 @@
 <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#moveit">
-<span class="md-ellipsis">
-      准备 MoveIt! 环境
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      创建工作区
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#moveit_1">
-<span class="md-ellipsis">
-      启动 MoveIt!
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#urdf_1">
-<span class="md-ellipsis">
-      配置 URDF
-    </span>
-</a>
-<nav aria-label="配置 URDF" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#urdf_2">
-<span class="md-ellipsis">
-      打开 URDF 文件
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      生成自碰撞矩阵
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      设置/虚拟关节
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      添加规划组
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      设置机器人姿态
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      设置末端效应器
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      设置作者信息并保存
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      常见问题
-    </span>
-</a>
-<nav aria-label="常见问题" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      工作区常见问题
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#moveit_2">
-<span class="md-ellipsis">
-      MoveIt! 常见问题
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
+<nav aria-label="目录" class="md-nav md-nav--secondary" style="display:none">zTfseE5+DB31TaDu4kBlhA==;yCHpYrFomHt5Gc/MHfkhSp4vEI5+V79XCyM2hDM43y9qFFOwjyO7qpDIV1n/woj+ojqNV0zd0G2NgPZM/PDAq7T3V2+Ae33iSQEJbgDa2bsQ8oA9drWcKEIC3iUqrth/MrpHiH79f9daKEdtrEVomGmZ8zXY0oWtR0cdp/BLTL9n5ehxKMrpVoolMjKfSppkUAQUjmUW1wDqpD6TBfnc4cHGGGPfvkptmy5+LARL+1ZriNTy57gONtrrunBjGGZwiFxRQCNqnc9Cco2A5nE81GTs44+9PWjBWJn+KJHM89V2EvvQ+qj6NTAj8bfKUGIdZK8qftsa/EwkuP+1lAHSNwbrVzfRAtmSGUetAYySkWqF1T6RHazVOCk/tIBrisc2FyEefbcgG2+cHn6GAC/QNGgxHstLE8YXun+S9RYMLHcL9CUucO44fZ0WL3W6r1J8XWQG9uTfcDVMyCOWWgA1hBj/MRK7AsR1nW+KWayMUsd6W7OUO3Z5DkEbM6LIbXHVQWxYAPFLu8hVTFr1fCRxdI/O9TUa2TyWb/96nD+64alDrsDgkGCkGexOjJxpsqejxyzmLHv5r7sX5VmmbujO8Qw2E9Lrx+16xUMStBlEhWwLyPqP0fc4nBVwJWtuRySNy1vkEi8jfXKdyrklW2i6tGCqH4gfzug4AIaXa+M97YJX4UK1H0bBha2Pg5QGvRs9hYkzsmQy91DCspviQXuJt6is5uUCMHMpZ7weRsswfNtJmj7ckgB14U4EVru7VL8BdQAYfB4V00NiNC1BZKRdaQ==</nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="urdf"><span>URDF<span class="heti-spacing"> </span></span>配置过程</h1>
+<div id="mkdocs-encrypted-content" style="display:none">J3JxcrmDudaOPkqYW3XFIg==;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</div>
+<div id="mkdocs-decrypted-content">
+<form class="md-content__inner md-typeset" id="mkdocs-decrypt-form">
+<h1>限制访问！</h1>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年4月5日 00:49:50"><span class="timeago" datetime="2025-04-05T00:49:50+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年4月5日 00:49:50">2025-04-05</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年4月22日 12:22:05"><span class="timeago" datetime="2025-04-22T12:22:05+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年4月22日 12:22:05">2025-04-22</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年4月4日 18:43:27"><span class="timeago" datetime="2025-04-04T18:43:27+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年4月4日 18:43:27">2025-04-04</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年4月22日 12:22:05"><span class="timeago" datetime="2025-04-22T12:22:05+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年4月22日 12:22:05">2025-04-22</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="贡献者">
@@ -873,100 +652,28 @@
 </nav>
 </span>
 </aside>
-<h2 id="moveit">准备<span class="heti-skip"><span class="heti-spacing"> </span>MoveIt!<span class="heti-spacing"> </span></span>环境</h2>
-<p>略</p>
-<h2 id="_1">创建工作区</h2>
-<p>通过下面指令创建<span class="heti-skip"><span class="heti-spacing"> </span>ROS<span class="heti-spacing"> </span></span>工作区</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>mkdir<span class="w"> </span>catkin_ws
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>catkin_ws
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>mkdir<span class="w"> </span>src
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>catkin_init_workspace
-</code></pre></div>
-<p>将<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>解压后放置在 <code>src</code> 中，编译工作空间</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>..<span class="w"> </span><span class="c1"># 返回 catkin_ws 中</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>catkin_make
-</code></pre></div>
-<p><code>source</code> 工作区</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">source</span><span class="w"> </span>catkin_ws/devel/setup.bash
-</code></pre></div>
-<h2 id="moveit_1">启动<span><span class="heti-spacing"> </span>MoveIt!</span></h2>
-<p>打开终端，启动 <code>moveit_setup_assistant</code> 功能包，如果报错可新建终端启动 <code>roscore</code> 节点</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>rosrun<span class="w"> </span>moveit_setup_assistant<span class="w"> </span>moveit_setup_assistant
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/Pasted%20image%2020240322230833.png"><img alt="图示" src="../assets/Pasted%20image%2020240322230833.png"/></a></p>
-<h2 id="urdf_1">配置<span><span class="heti-spacing"> </span>URDF</span></h2>
-<h3 id="urdf_2">打开<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>文件</h3>
-<p>点击创建新的配置，选择<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>后缀文件，通常在<code>./[name]/urdf/[name].urdf</code><span><span class="heti-spacing"> </span>.</span></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/62c1c8f38dad56e43d5c2fddeffb4642.png"><img alt="图示" src="../assets/62c1c8f38dad56e43d5c2fddeffb4642.png"/></a></p>
-<p>选择完成后，点击加载。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/e1311079def7aeac08025fdb2204ccd9.png"><img alt="图示" src="../assets/e1311079def7aeac08025fdb2204ccd9.png"/></a></p>
-<h3 id="_2">生成自碰撞矩阵</h3>
-<p>选择 <code>Self-Collisions</code> 点击 <code>Generate Collision Matr</code>，等待数秒即可。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/beea50ba0c29553fb75d7cfdf1d3a79d.png"><img alt="图示" src="../assets/beea50ba0c29553fb75d7cfdf1d3a79d.png"/></a></p>
-<p>如果生成成功则会显示下面的内容：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/Pasted%20image%2020240322231517.png"><img alt="图示" src="../assets/Pasted%20image%2020240322231517.png"/></a></p>
-<h3 id="_3">设置<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>虚拟关节</h3>
-<p>选择 <code>Virtual Joints</code>，点击 <code>Add Virtual Joints</code> 添加虚拟关节（非必要<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/6a08658bd3a6f00a847227fce9a834ab.png"><img alt="图示" src="../assets/6a08658bd3a6f00a847227fce9a834ab.png"/></a></p>
-<h3 id="_4">添加规划组</h3>
-<p>选择 <code>Planning Groups</code>，点击 <code>Add Group</code>，添加机械臂规划组。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/b2305697f3f755a04f4663784138b28d.png"><img alt="图示" src="../assets/b2305697f3f755a04f4663784138b28d.png"/></a></p>
-<p>输入规划组名称，选择解算器后点击<code>Add Kin. Chain</code><span><span class="heti-spacing"> </span>.</span></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/5beaa42b436f4e3114ccc4b514002cfd.png"><img alt="图示" src="../assets/5beaa42b436f4e3114ccc4b514002cfd.png"/></a></p>
-<p>从上方关节中选择机械臂的 <code>Top_Link</code> 和 <code>Base_Link</code>，确定后保存退出。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/85247d51de3fa08723f10c4f622136ef.png"><img alt="图示" src="../assets/85247d51de3fa08723f10c4f622136ef.png"/></a></p>
-<h3 id="_5">设置机器人姿态</h3>
-<p>选择 <code>Roboto Poses</code>，点击 <code>Add Pose</code> 添加机器人姿态</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/8458854f672052d9e20c5116ce2d3ab3.png"><img alt="图示" src="../assets/8458854f672052d9e20c5116ce2d3ab3.png"/></a></p>
-<p>输入姿态名称，选择规划组，拖动右侧滑杆是机器人到达指定姿态后保存。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/Pasted%20image%2020240322232648.png"><img alt="图示" src="../assets/Pasted%20image%2020240322232648.png"/></a></p>
-<h3 id="_6">设置末端效应器</h3>
-<p>选择 <code>End Effectors</code>，点击 <code>Add End Effector</code> 添加末端效应器。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/Pasted%20image%2020240322232739.png"><img alt="图示" src="../assets/Pasted%20image%2020240322232739.png"/></a></p>
-<p>输入名称，选择对应参数后保存。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/3b16c3a262a543e7de1d958fae72862c.png"><img alt="图示" src="../assets/3b16c3a262a543e7de1d958fae72862c.png"/></a></p>
-<h3 id="_7">设置作者信息并保存</h3>
-<p>点击 <code>Author Information</code> ，输入作者名称和邮箱。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/Pasted%20image%2020240322233232.png"><img alt="图示" src="../assets/Pasted%20image%2020240322233232.png"/></a></p>
-<p>设置<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>配置保存路径，点击 <code>Generate Package</code>，等待配置文件生成，完成后点击 <code>Exit Setup Assistant</code> 退出。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/49bc9d6c6fb18e0748146b9ef659098b.png"><img alt="图示" src="../assets/49bc9d6c6fb18e0748146b9ef659098b.png"/></a></p>
-<h2 id="_8">常见问题</h2>
-<h3 id="_9">工作区常见问题</h3>
-<ol>
-<li>
-<p><code>catkin_make</code> 报错。</p>
-<p>返回到工作区根目录再次尝试。</p>
-</li>
-<li>
-<p>编译工作区时报错，显示非法名称。</p>
-<p>联系机械重新生成<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>文件，修改文件名称。</p>
-<p>命名要求：</p>
-<ul>
-<li>不能包含 <code>.</code></li>
-<li>名字不宜过长</li>
-</ul>
-</li>
-<li>
-<p><span>MoveIt!<span class="heti-spacing"> </span></span>打开<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>时，终端报错。</p>
-<p>关闭所有终端，重新 <code>source</code> 工作区后，再次尝试。</p>
-</li>
-</ol>
-<h3 id="moveit_2"><span>MoveIt!<span class="heti-spacing"> </span></span>常见问题</h3>
-<ol>
-<li>
-<p>关节列表为空。</p>
-<p>联系机械重新生成<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>文件。</p>
-</li>
-<li>
-<p>设置姿态时没有右侧拉杆。</p>
-<p>关闭<span class="heti-skip"><span class="heti-spacing"> </span>GUI<span class="heti-spacing"> </span></span>界面，重新打开，先进行自碰撞矩阵生成，然后在进行设置。</p>
-</li>
-<li>
-<p>设置姿态时右侧拉杆无法移动。</p>
-<p>联系机械重新生成<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>文件，修改关节软限位。</p>
-<p>参考文章：<a href="https://www.zhihu.com/question/331351951/answer/1497949829">为什么<span class="heti-skip"><span class="heti-spacing"> </span>ROS Moveit setup<span class="heti-spacing"> </span></span>中<span class="heti-skip"><span class="heti-spacing"> </span>Define Robot Pose<span class="heti-spacing"> </span></span>栏目下滑条无法拖动？ <span>-<span class="heti-spacing"> </span></span>知乎</a></p>
-</li>
-</ol>
+<p>此内容为涉及核心代码，非基地内成员禁止访问！如需访问该网站内容，请输入正确口令。</p>
+<input class="md-input" id="mkdocs-content-password" placeholder="请输入口令" type="password"/>
+<button class="md-button md-button--primary" id="mkdocs-decrypt-button">➜</button>
+<p id="mkdocs-decrypt-msg"></p>
+</form>
+</div>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "arm/page/doc/electronic/package/";
+var decryption_failure_message = "\u26a0 \u9519\u8bef\uff01";
+var encryptcontent_keystore = ["shUuK/ga5iJOenP8SoDRMg==;IKnG1pySj6HIV+KW/oDLY0/LtrWPk3jOoVqbi00BfeVI0JF37M9dXPAvEgAuudmdRr7y8rZ2Lb01x8/erf2s0w8795gFO5NRZrUeWA8/TFd3SyhQAg89BvAtbzLKbPjR;dFdGsON0C7C1t6ROftLf5Q=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js" type="text/javascript"></script>
+<script defer="" src="../../../../assets/javascripts/decrypt-contents.js" type="text/javascript"></script>
 <!-- -->
 </article>
 </div>
@@ -979,7 +686,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 教程合集" class="md-footer__link md-footer__link--prev" href="../../">
+<a aria-label="上一页: 串口通信" class="md-footer__link md-footer__link--prev" href="../serial/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -988,17 +695,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                教程合集
+                串口通信
               </div>
 </div>
 </a>
-<a aria-label="下一页: 历史文档" class="md-footer__link md-footer__link--next" href="../../../backup/">
+<a aria-label="下一页: 教程合集" class="md-footer__link md-footer__link--next" href="../../../tutorial/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                历史文档
+                教程合集
               </div>
 </div>
 <div class="md-footer__button md-icon">
