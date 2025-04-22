@@ -5,6 +5,7 @@ form#mkdocs-decrypt-form {
     border-radius: 1rem;
     border: 2px solid var(--md-pic-shadow-color);
     transition: border .25s, box-shadow .25s;
+    margin: 0;
 }
 
 form#mkdocs-decrypt-form:hover,
