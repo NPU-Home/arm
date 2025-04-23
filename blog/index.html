@@ -722,195 +722,29 @@
 <li class="md-meta__item">
 <time datetime="2025-04-04 00:00:00+00:00">2025年4月4日</time></li>
 <li class="md-meta__item">
-            分类于
-            
-              <a class="md-meta__link" href="category/%E8%AE%B0%E5%BD%95/">记录</a>, 
-              <a class="md-meta__link" href="category/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">网站搭建</a></li>
+          分类于
+          
+          <a class="md-meta__link" href="category/%E8%AE%B0%E5%BD%95/">记录</a>, 
+          <a class="md-meta__link" href="category/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">网站搭建</a></li>
 <li class="md-meta__item">
-            
-              需要 3 分钟阅读时间
-            
-          </li>
+          
+          需要 3 分钟阅读时间
+          
+        </li>
 </ul>
 </div>
 </header>
 <div class="md-post__content md-typeset">
 <h2 id="_1"><a class="toclink" href="2025/04/04/%E6%9C%BA%E5%99%A8%E8%87%82%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">机器臂网站搭建记录</a></h2>
-<p>在机械臂的开发过程中，经常出现代码、文档、图片等文件难以找到的情况。同时前辈的一些文档也已经失传，在通过搜索引擎意外找到一个基地学长的机械臂开发记录博客后，决定搭建一个网站来记录机械臂的文档。方便后续组员的开发和学习。</p>
-<h3 id="_2"><a class="toclink" href="2025/04/04/%E6%9C%BA%E5%99%A8%E8%87%82%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/#_2">初始化</a></h3>
-<p>开发一个网站有许多技术可以选择。为了能够简单快速的搭建一个网站，选择了<a href="https://www.mkdocs.org/"><span class="heti-skip"><span class="heti-spacing"> </span>MkDocs<span class="heti-spacing"> </span></span></a>作为网站的框架。使用<span class="heti-skip"><span class="heti-spacing"> </span>Github Pages<span class="heti-spacing"> </span></span>作为网站的托管平台。</p>
-<p><span>MkDocs<span class="heti-spacing"> </span></span>是一个静态网站生成器，使用<span class="heti-skip"><span class="heti-spacing"> </span>Markdown<span class="heti-spacing"> </span></span>作为文档的编写语言。可以快速的搭建一个网站。</p>
-<p>但是其界面和功能都比较简单。为了能够更好的展示文档，使用了<a href="https://squidfunk.github.io/mkdocs-material/"><span class="heti-skip"><span class="heti-spacing"> </span>Material for MkDocs<span class="heti-spacing"> </span></span></a>作为网站的主题。</p>
-<h3 id="_3"><a class="toclink" href="2025/04/04/%E6%9C%BA%E5%99%A8%E8%87%82%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/#_3">填充网站内容</a></h3>
-<p>根据需求，网站初步设立了几个模块：</p>
-<ul>
-<li>文档：最新的机械臂代码的文档和一些常用的基础知识的文档。</li>
-<li>教程：一些与机械臂开发有关的使用教程。</li>
-<li>历史文档：用于存放一些历史文档和一些过时的文档。</li>
-</ul>
-<h3 id="_4"><a class="toclink" href="2025/04/04/%E6%9C%BA%E5%99%A8%E8%87%82%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/#_4">美化网站</a></h3>
-<p>虽然<span class="heti-skip"><span class="heti-spacing"> </span>MkDocs<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Material for MkDocs<span class="heti-spacing"> </span></span>的界面看着都还行，但是感觉还是不够养眼 🫣。</p>
-<p>所以基于之前使用的经验，着手自己编写<span class="heti-skip"><span class="heti-spacing"> </span>CSS<span class="heti-spacing"> </span></span>来美化网站。经过近半年的打磨，主题已经基本完成。于是决定将其开源。</p>
-<div class="grid cards">
-<ul>
-<li>
-<p><img alt="图标" class="off-glb" id="ico" src="https://gaozqi.github.io/material-mkdocs-theme/images/icon.png"/> <name><span>Rounded<span class="heti-spacing"> </span></span>主题</name></p>
-<hr/>
-<p>一款适用于 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.029 18.772.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709zm2.023-13.827v13.253l3.949-1.975V2.97zM5.076 2.642 1.458 4.45 12.73 21.358l3.618-1.809z"></path></svg></span> <span>Material-Mkdocs<span class="heti-spacing"> </span></span>的极简风格主题。</p>
-<p><a class="md-button md-button--primary" href="https://github.com/GaoZQi/material-mkdocs-theme" id="right">查看项目 <span class="twemoji"><svg viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M4.7 10c-.2 0-.4-.1-.5-.2-.3-.3-.3-.8 0-1.1L6.9 6 4.2 3.3c-.3-.3-.3-.8 0-1.1s.8-.3 1.1 0l3.3 3.2c.3.3.3.8 0 1.1L5.3 9.7q-.3.3-.6.3"></path></svg></span></a>
-<a class="md-button" href="https://gaozqi.github.io/material-mkdocs-theme/" id="right">查看文档</a></p>
-</li>
-</ul>
-</div>
-<h3 id="_5"><a class="toclink" href="2025/04/04/%E6%9C%BA%E5%99%A8%E8%87%82%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/#_5">完善与维护</a></h3>
-<p>为了降低维护成本，参考的<a href="https://github.com/RonaldLN"><span class="heti-skip"><span class="heti-spacing"> </span>Ronald Luo<span class="heti-spacing"> </span></span></a>的一系列文章，使用了<span class="heti-skip"><span class="heti-spacing"> </span>Github Actions<span class="heti-spacing"> </span></span>来自动化部署网站。</p>
-<ul>
-<li><a href="https://ronaldln.github.io/MyPamphlet-Blog/2025/03/29/github-actionprivatepublic/">通过实现在<span class="heti-skip"><span class="heti-spacing"> </span>Github Action<span class="heti-spacing"> </span></span>中将文件推送到另一个仓库中，实现<span class="heti-skip"><span class="heti-spacing"> </span>private<span class="heti-spacing"> </span></span>文档仓库构建的页面自动部署到<span class="heti-skip"><span class="heti-spacing"> </span>public<span class="heti-spacing"> </span></span>仓库中</a></li>
-<li><a href="https://ronaldln.github.io/MyPamphlet-Blog/2025/03/31/github-actionfork/">实现使用<span class="heti-skip"><span class="heti-spacing"> </span>Github Action<span class="heti-spacing"> </span></span>自动同步<span class="heti-skip"><span class="heti-spacing"> </span>fork<span class="heti-spacing"> </span></span>的上游仓库</a></li>
-<li><a href="https://ronaldln.github.io/MyPamphlet-Blog/2025/04/01/github-actionsubmodule/">尝试使用<span class="heti-skip"><span class="heti-spacing"> </span>Github Action<span class="heti-spacing"> </span></span>自动更新<span><span class="heti-spacing"> </span>submodule</span></a></li>
-</ul>
-<h4 id="_6"><a class="toclink" href="2025/04/04/%E6%9C%BA%E5%99%A8%E8%87%82%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/#_6">准备工作</a></h4>
-<p>由于文章中设计基地的核心代码，所以需要将其放在一个私有的仓库中。而<span class="heti-skip"><span class="heti-spacing"> </span>Github Pages<span class="heti-spacing"> </span></span>只能托管在一个公共的仓库中。所以需要将私有的仓库中的文件同步到公共的仓库中。</p>
-<p>并且网站的主题存放在一个子模块中。需要将子模块中的文件同步到公共的仓库中。</p>
-<p>所以根据文章中的方法，创建了一个公共的仓库和一个私有的仓库。</p>
-<ul>
-<li><code>NPU-Home/arm</code>：公共的仓库，用于存放网站的文件。</li>
-<li><code>NPU-Home/arm-docs</code>：私有的仓库，用于存放网站的文件。</li>
-</ul>
-<p>为了实现一个仓库对另一个仓库的写入权限，需要准备一对<span class="heti-skip"><span class="heti-spacing"> </span>SSH<span class="heti-spacing"> </span></span>密钥。</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-C<span class="w"> </span><span class="s2">"robot@npu-home.com"</span>
-</code></pre></div>
-<p>将生成的公钥添加到私有仓库中。</p>
-<div class="admonition important">
-<p class="admonition-title">注意</p>
-<p>添加公钥的时候需要选择 <code>Allow write access</code>。否则无法将私有仓库中的文件同步到公共的仓库中。</p>
-</div>
-<p><img alt="pub" src="assets/image.png"/></p>
-<p>然后将私有仓库的<span class="heti-skip"><span class="heti-spacing"> </span>SSH<span class="heti-spacing"> </span></span>地址添加到公共仓库中。</p>
-<div class="admonition important">
-<p class="admonition-title">注意</p>
-<p><code>Name</code>要设置为 <code>SSH_DEPLOY_KEY</code>，否则无法连接仓库。</p>
-</div>
-<p><img alt="key" src="assets/image-1.png"/></p>
-<p>由于是远程构建，所以需要准备一个<code>requirements.txt</code> 文件，用于安装依赖。</p>
-<div class="highlight"><span class="filename">requirements.txt</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">mkdocs</span><span class="o">-</span><span class="n">material</span><span class="o">&gt;=</span><span class="mf">9.6.9</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">mkdocs</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">revision</span><span class="o">-</span><span class="n">date</span><span class="o">-</span><span class="n">localized</span><span class="o">-</span><span class="n">plugin</span><span class="o">&gt;=</span><span class="mf">1.4.5</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">mkdocs</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">committers</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="mi">2</span><span class="o">&gt;=</span><span class="mf">2.5.0</span>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">mkdocs</span><span class="o">-</span><span class="n">encryptcontent</span><span class="o">-</span><span class="n">plugin</span><span class="o">&gt;=</span><span class="mf">3.0.4</span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">mkdocs</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">nav</span><span class="o">&gt;=</span><span class="mf">3.1.0</span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">mkdocs</span><span class="o">-</span><span class="n">heti</span><span class="o">-</span><span class="n">plugin</span><span class="o">&gt;=</span><span class="mf">0.1.6</span>
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">mkdocs</span><span class="o">-</span><span class="n">video</span><span class="o">&gt;=</span><span class="mf">1.5.0</span>
-<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">mkdocs</span><span class="o">-</span><span class="n">glightbox</span><span class="o">&gt;=</span><span class="mf">0.4.0</span>
-</code></pre></div>
-<h4 id="github-actions"><a class="toclink" href="2025/04/04/%E6%9C%BA%E5%99%A8%E8%87%82%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/#github-actions">配置<span><span class="heti-spacing"> </span>Github Actions</span></a></h4>
-<p>在公共仓库中创建一个 <code>.github/workflows</code> 文件夹。然后在其中创建下面文件。</p>
-<ul>
-<li>
-<p>自动构建网站的文件</p>
-<div class="highlight"><span class="filename">gh-deploy.yml</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy MkDocs Site To Public Repo</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nt">on</span><span class="p">:</span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">push</span><span class="p">:</span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"main"</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># 仅在 main 分支推送时触发</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">workflow_run</span><span class="p">:</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="nt">workflows</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"Submodules</span><span class="nv"> </span><span class="s">Sync"</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># 必须与目标 Workflow 的 name 完全一致</span>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">main</span><span class="p p-Indicator">]</span>
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="nt">types</span><span class="p">:</span>
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">completed</span><span class="w"> </span><span class="c1"># 监听目标 Workflow 完成</span>
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="nt">permissions</span><span class="p">:</span>
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="nt">jobs</span><span class="p">:</span>
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="nt">build-and-deploy</span><span class="p">:</span>
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">        </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span><span class="w"> </span><span class="c1"># 使用 GitHub 提供的 Ubuntu 环境</span>
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="nt">steps</span><span class="p">:</span>
-<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout Main</span>
-<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">            </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
-<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">            </span><span class="nt">with</span><span class="p">:</span>
-<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">                </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
-<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">                </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span><span class="c1"># 检出子模块</span>
-<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>
-<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup Python</span>
-<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">            </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
-<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">            </span><span class="nt">with</span><span class="p">:</span>
-<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">                </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">"3.12"</span>
-<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>
-<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Dependencies</span>
-<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">            </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
-<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a>
-<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build Site</span>
-<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">            </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -m mkdocs build</span>
-<a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">            </span><span class="nt">env</span><span class="p">:</span>
-<a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">                </span><span class="nt">MKDOCS_GIT_COMMITTERS_APIKEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
-<a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a>
-<a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pushes to another repository</span>
-<a href="#__codelineno-2-39" id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">            </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpina/github-action-push-to-another-repository@main</span>
-<a href="#__codelineno-2-40" id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="w">            </span><span class="nt">env</span><span class="p">:</span>
-<a href="#__codelineno-2-41" id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="w">                </span><span class="nt">SSH_DEPLOY_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.SSH_DEPLOY_KEY }}</span>
-<a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="w">            </span><span class="nt">with</span><span class="p">:</span>
-<a href="#__codelineno-2-43" id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="w">                </span><span class="nt">source-directory</span><span class="p">:</span><span class="w"> </span><span class="s">"site"</span>
-<a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a><span class="w">                </span><span class="nt">destination-github-username</span><span class="p">:</span><span class="w"> </span><span class="s">"NPU-Home"</span>
-<a href="#__codelineno-2-45" id="__codelineno-2-45" name="__codelineno-2-45"></a><span class="w">                </span><span class="nt">destination-repository-name</span><span class="p">:</span><span class="w"> </span><span class="s">"arm"</span><span class="w"> </span><span class="c1"># (1)</span>
-<a href="#__codelineno-2-46" id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="w">                </span><span class="nt">target-branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gh-pages</span><span class="w"> </span><span class="c1"># (2)</span>
-</code></pre></div>
-<ol>
-<li>目标仓库的名称</li>
-<li>目标分支的名称，第一次需要手动创建。</li>
-</ol>
-</li>
-<li>
-<p>子模块同步</p>
-<div class="highlight"><span class="filename">submodule-sync.yml</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Submodules</span><span class="nv"> </span><span class="s">Sync"</span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nt">on</span><span class="p">:</span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="c1"># Allows you to run this workflow manually from the Actions tab or through HTTP API</span>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="nt">permissions</span><span class="p">:</span>
-<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>
-<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="nt">jobs</span><span class="p">:</span>
-<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="nt">sync</span><span class="p">:</span>
-<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Submodules</span><span class="nv"> </span><span class="s">Sync"</span>
-<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>
-<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">        </span><span class="c1"># Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest</span>
-<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">        </span><span class="nt">defaults</span><span class="p">:</span>
-<a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">            </span><span class="nt">run</span><span class="p">:</span>
-<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">                </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash</span>
-<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>
-<a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">        </span><span class="nt">steps</span><span class="p">:</span>
-<a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">            </span><span class="c1"># Checkout the repository to the GitHub Actions runner</span>
-<a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout</span>
-<a href="#__codelineno-3-23" id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">            </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
-<a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">            </span><span class="nt">with</span><span class="p">:</span>
-<a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">                </span><span class="nt">token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
-<a href="#__codelineno-3-26" id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">                </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a href="#__codelineno-3-27" id="__codelineno-3-27" name="__codelineno-3-27"></a>
-<a href="#__codelineno-3-28" id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">            </span><span class="c1"># Update references</span>
-<a href="#__codelineno-3-29" id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Git Submodule Update</span>
-<a href="#__codelineno-3-30" id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">            </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<a href="#__codelineno-3-31" id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">                </span><span class="no">git pull --recurse-submodules</span>
-<a href="#__codelineno-3-32" id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">                </span><span class="no">git submodule update --remote --recursive</span>
-<a href="#__codelineno-3-33" id="__codelineno-3-33" name="__codelineno-3-33"></a>
-<a href="#__codelineno-3-34" id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commit update</span>
-<a href="#__codelineno-3-35" id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">            </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<a href="#__codelineno-3-36" id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">                </span><span class="no">git config --global user.name 'Git bot'</span>
-<a href="#__codelineno-3-37" id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">                </span><span class="no">git config --global user.email 'bot@noreply.github.com'</span>
-<a href="#__codelineno-3-38" id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">                </span><span class="no">git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}</span>
-<a href="#__codelineno-3-39" id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">                </span><span class="no">git commit -am "Auto updated submodule references" &amp;&amp; git push || echo "No changes to commit"</span>
-</code></pre></div>
-</li>
-</ul>
-<p>尝试提交代码到公共仓库中，网站即可自动构建，部署。</p>
-<p><img alt="alt text" src="assets/image-2.png"/></p>
-<h4 id="giscus"><a class="toclink" href="2025/04/04/%E6%9C%BA%E5%99%A8%E8%87%82%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/#giscus">配置<span><span class="heti-spacing"> </span>giscus</span></a></h4>
-<p>为了能够更好交流，使用了<a href="https://giscus.app/"><span class="heti-skip"><span class="heti-spacing"> </span>Giscus<span class="heti-spacing"> </span></span></a>作为评论系统。</p>
-<p>打开网站，按照官方提示进行配置即可。</p>
-<h3 id="_7"><a class="toclink" href="2025/04/04/%E6%9C%BA%E5%99%A8%E8%87%82%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/#_7">尾声</a></h3>
-<p>为了网站不乏单调（更好的展示标题栏的高斯模糊<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，在首页加了一首陶喆的《I'm O.K.<heti-adjacent class="heti-adjacent-half">》</heti-adjacent>。</p>
-<p>选择这首歌即代表了在基地一年的痛苦心理，也代表了我的态度<span><span class="heti-spacing"> </span>I'm O.K.</span></p>
+<p>在机械臂的开发过程中，经常出现代码、文档、图片等文件难以找到的情况。同时前辈的一些文档也已经失传，在通过搜索引擎意外找到一个基地学长的机械臂开发记录博客后，决定搭建一个网站来记录机械臂的文档，方便后续组员的开发和学习。</p>
+<nav class="md-post__action">
+<a href="2025/04/04/%E6%9C%BA%E5%99%A8%E8%87%82%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">
+        继续阅读
+        <svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06"></path>
+</svg>
+</a>
+</nav>
 </div>
 </article>
 <nav class="md-pagination">
@@ -974,7 +808,8 @@
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
 <script src="../js/timeago.min.js"></script>
 <script src="../js/timeago_mkdocs_material.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../resources/javascript/mathjax.js"></script>
+<script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
