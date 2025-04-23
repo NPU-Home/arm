@@ -945,7 +945,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="urdf"><span>URDF<span class="heti-spacing"> </span></span>配置过程<a class="headerlink" href="#urdf" title="Permanent link">↩</a></h1>
+<h1 id="urdf"><span>URDF<span class="heti-spacing"> </span></span>配置过程<a class="headerlink" href="#urdf" title="Permanent link">⤴</a></h1>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
@@ -971,9 +971,9 @@
 </nav>
 </span>
 </aside>
-<h2 id="moveit">准备<span class="heti-skip"><span class="heti-spacing"> </span>MoveIt!<span class="heti-spacing"> </span></span>环境<a class="headerlink" href="#moveit" title="Permanent link">↩</a></h2>
+<h2 id="moveit">准备<span class="heti-skip"><span class="heti-spacing"> </span>MoveIt!<span class="heti-spacing"> </span></span>环境<a class="headerlink" href="#moveit" title="Permanent link">⤴</a></h2>
 <p>略</p>
-<h2 id="_1">创建工作区<a class="headerlink" href="#_1" title="Permanent link">↩</a></h2>
+<h2 id="_1">创建工作区<a class="headerlink" href="#_1" title="Permanent link">⤴</a></h2>
 <p>通过下面指令创建<span class="heti-skip"><span class="heti-spacing"> </span>ROS<span class="heti-spacing"> </span></span>工作区</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>mkdir<span class="w"> </span>catkin_ws
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>catkin_ws
@@ -987,49 +987,49 @@
 <p><code>source</code> 工作区</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">source</span><span class="w"> </span>catkin_ws/devel/setup.bash
 </code></pre></div>
-<h2 id="moveit_1">启动<span><span class="heti-spacing"> </span>MoveIt!</span><a class="headerlink" href="#moveit_1" title="Permanent link">↩</a></h2>
+<h2 id="moveit_1">启动<span><span class="heti-spacing"> </span>MoveIt!</span><a class="headerlink" href="#moveit_1" title="Permanent link">⤴</a></h2>
 <p>打开终端，启动 <code>moveit_setup_assistant</code> 功能包，如果报错可新建终端启动 <code>roscore</code> 节点</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>rosrun<span class="w"> </span>moveit_setup_assistant<span class="w"> </span>moveit_setup_assistant
 </code></pre></div>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/Pasted%20image%2020240322230833.png"><img alt="图示" src="../assets/Pasted%20image%2020240322230833.png"/></a></p>
-<h2 id="urdf_1">配置<span><span class="heti-spacing"> </span>URDF</span><a class="headerlink" href="#urdf_1" title="Permanent link">↩</a></h2>
-<h3 id="urdf_2">打开<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>文件<a class="headerlink" href="#urdf_2" title="Permanent link">↩</a></h3>
+<h2 id="urdf_1">配置<span><span class="heti-spacing"> </span>URDF</span><a class="headerlink" href="#urdf_1" title="Permanent link">⤴</a></h2>
+<h3 id="urdf_2">打开<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>文件<a class="headerlink" href="#urdf_2" title="Permanent link">⤴</a></h3>
 <p>点击创建新的配置，选择<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>后缀文件，通常在<code>./[name]/urdf/[name].urdf</code><span><span class="heti-spacing"> </span>.</span></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/62c1c8f38dad56e43d5c2fddeffb4642.png"><img alt="图示" src="../assets/62c1c8f38dad56e43d5c2fddeffb4642.png"/></a></p>
 <p>选择完成后，点击加载。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/e1311079def7aeac08025fdb2204ccd9.png"><img alt="图示" src="../assets/e1311079def7aeac08025fdb2204ccd9.png"/></a></p>
-<h3 id="_2">生成自碰撞矩阵<a class="headerlink" href="#_2" title="Permanent link">↩</a></h3>
+<h3 id="_2">生成自碰撞矩阵<a class="headerlink" href="#_2" title="Permanent link">⤴</a></h3>
 <p>选择 <code>Self-Collisions</code> 点击 <code>Generate Collision Matr</code>，等待数秒即可。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/beea50ba0c29553fb75d7cfdf1d3a79d.png"><img alt="图示" src="../assets/beea50ba0c29553fb75d7cfdf1d3a79d.png"/></a></p>
 <p>如果生成成功则会显示下面的内容：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/Pasted%20image%2020240322231517.png"><img alt="图示" src="../assets/Pasted%20image%2020240322231517.png"/></a></p>
-<h3 id="_3">设置<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>虚拟关节<a class="headerlink" href="#_3" title="Permanent link">↩</a></h3>
+<h3 id="_3">设置<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>虚拟关节<a class="headerlink" href="#_3" title="Permanent link">⤴</a></h3>
 <p>选择 <code>Virtual Joints</code>，点击 <code>Add Virtual Joints</code> 添加虚拟关节（非必要<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/6a08658bd3a6f00a847227fce9a834ab.png"><img alt="图示" src="../assets/6a08658bd3a6f00a847227fce9a834ab.png"/></a></p>
-<h3 id="_4">添加规划组<a class="headerlink" href="#_4" title="Permanent link">↩</a></h3>
+<h3 id="_4">添加规划组<a class="headerlink" href="#_4" title="Permanent link">⤴</a></h3>
 <p>选择 <code>Planning Groups</code>，点击 <code>Add Group</code>，添加机械臂规划组。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/b2305697f3f755a04f4663784138b28d.png"><img alt="图示" src="../assets/b2305697f3f755a04f4663784138b28d.png"/></a></p>
 <p>输入规划组名称，选择解算器后点击<code>Add Kin. Chain</code><span><span class="heti-spacing"> </span>.</span></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/5beaa42b436f4e3114ccc4b514002cfd.png"><img alt="图示" src="../assets/5beaa42b436f4e3114ccc4b514002cfd.png"/></a></p>
 <p>从上方关节中选择机械臂的 <code>Top_Link</code> 和 <code>Base_Link</code>，确定后保存退出。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/85247d51de3fa08723f10c4f622136ef.png"><img alt="图示" src="../assets/85247d51de3fa08723f10c4f622136ef.png"/></a></p>
-<h3 id="_5">设置机器人姿态<a class="headerlink" href="#_5" title="Permanent link">↩</a></h3>
+<h3 id="_5">设置机器人姿态<a class="headerlink" href="#_5" title="Permanent link">⤴</a></h3>
 <p>选择 <code>Roboto Poses</code>，点击 <code>Add Pose</code> 添加机器人姿态</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/8458854f672052d9e20c5116ce2d3ab3.png"><img alt="图示" src="../assets/8458854f672052d9e20c5116ce2d3ab3.png"/></a></p>
 <p>输入姿态名称，选择规划组，拖动右侧滑杆是机器人到达指定姿态后保存。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/Pasted%20image%2020240322232648.png"><img alt="图示" src="../assets/Pasted%20image%2020240322232648.png"/></a></p>
-<h3 id="_6">设置末端效应器<a class="headerlink" href="#_6" title="Permanent link">↩</a></h3>
+<h3 id="_6">设置末端效应器<a class="headerlink" href="#_6" title="Permanent link">⤴</a></h3>
 <p>选择 <code>End Effectors</code>，点击 <code>Add End Effector</code> 添加末端效应器。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/Pasted%20image%2020240322232739.png"><img alt="图示" src="../assets/Pasted%20image%2020240322232739.png"/></a></p>
 <p>输入名称，选择对应参数后保存。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/3b16c3a262a543e7de1d958fae72862c.png"><img alt="图示" src="../assets/3b16c3a262a543e7de1d958fae72862c.png"/></a></p>
-<h3 id="_7">设置作者信息并保存<a class="headerlink" href="#_7" title="Permanent link">↩</a></h3>
+<h3 id="_7">设置作者信息并保存<a class="headerlink" href="#_7" title="Permanent link">⤴</a></h3>
 <p>点击 <code>Author Information</code> ，输入作者名称和邮箱。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/Pasted%20image%2020240322233232.png"><img alt="图示" src="../assets/Pasted%20image%2020240322233232.png"/></a></p>
 <p>设置<span class="heti-skip"><span class="heti-spacing"> </span>URDF<span class="heti-spacing"> </span></span>配置保存路径，点击 <code>Generate Package</code>，等待配置文件生成，完成后点击 <code>Exit Setup Assistant</code> 退出。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../assets/49bc9d6c6fb18e0748146b9ef659098b.png"><img alt="图示" src="../assets/49bc9d6c6fb18e0748146b9ef659098b.png"/></a></p>
-<h2 id="_8">常见问题<a class="headerlink" href="#_8" title="Permanent link">↩</a></h2>
-<h3 id="_9">工作区常见问题<a class="headerlink" href="#_9" title="Permanent link">↩</a></h3>
+<h2 id="_8">常见问题<a class="headerlink" href="#_8" title="Permanent link">⤴</a></h2>
+<h3 id="_9">工作区常见问题<a class="headerlink" href="#_9" title="Permanent link">⤴</a></h3>
 <ol>
 <li>
 <p><code>catkin_make</code> 报错。</p>
@@ -1049,7 +1049,7 @@
 <p>关闭所有终端，重新 <code>source</code> 工作区后，再次尝试。</p>
 </li>
 </ol>
-<h3 id="moveit_2"><span>MoveIt!<span class="heti-spacing"> </span></span>常见问题<a class="headerlink" href="#moveit_2" title="Permanent link">↩</a></h3>
+<h3 id="moveit_2"><span>MoveIt!<span class="heti-spacing"> </span></span>常见问题<a class="headerlink" href="#moveit_2" title="Permanent link">⤴</a></h3>
 <ol>
 <li>
 <p>关节列表为空。</p>
