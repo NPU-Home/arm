@@ -47,3 +47,9 @@ nav.md-post__action a svg {
     border-radius: .35em;
     padding-bottom: 3px;
 }
+
+@media screen and (max-width: 76.2344em) {
+    .md-sidebar.md-sidebar--post .md-nav {
+        display: none;
+    }
+}
